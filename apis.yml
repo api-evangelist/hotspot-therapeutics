@@ -1,7 +1,17 @@
 aid: hotspot-therapeutics
-name: Hotspot Therapeutics
-description: 'Hotspot Therapeutics is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+name: HotSpot Therapeutics
+description: 'HotSpot Therapeutics is a clinical-stage biopharmaceutical company headquartered
+  in Boston, Massachusetts, pioneering allosteric drug discovery by targeting "natural
+  hotspots" — the regulatory on/off switches on proteins. Its Smart Allostery platform
+  combines AI-driven mining of large, diverse structural and biological data sets with
+  a tailored pharmacology toolkit and bespoke medicinal chemistry to design first-in-class
+  oral small molecules, and has been applied across E3 ligases, kinases and transcription
+  factors. The company has raised roughly $190M across Series A, B and C financings and
+  advanced its lead candidate HST-1011, an oral allosteric CBL-B inhibitor, into first-in-human
+  dosing for cancer, alongside programs in autoimmune disease. HotSpot sells medicines
+  and research collaborations, not software: it publishes no public developer program,
+  API, SDK or machine-readable contract of any kind.'
+image: https://avatars.githubusercontent.com/u/105356575?v=4
 url: https://raw.githubusercontent.com/api-evangelist/hotspot-therapeutics/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +22,14 @@ created: '2026-08-22'
 modified: '2026-08-22'
 tags:
 - Company
+- Biotechnology
+- Pharmaceuticals
+- Drug Discovery
+- Life Sciences
+- Oncology
+- Immunology
+- Artificial Intelligence
+- Health
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +37,42 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/hotspot-therapeutics-domain-security.yml
 - type: Website
+  url: https://www.hotspotthera.com/
+- type: GitHubOrganization
+  url: https://github.com/HotSpot-Therapeutics
+- type: Blog
+  url: https://www.hotspotthera.com/blog/
+- type: PrivacyPolicy
+  url: https://www.hotspotthera.com/privacy-policy/
+- type: TermsOfService
+  url: https://www.hotspotthera.com/terms-and-conditions/
+- type: SecondaryMarketListing
   url: https://forgeglobal.com/hotspot-therapeutics_stock/
+x-enrichment:
+  date: '2026-08-22'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    HotSpot Therapeutics is a clinical-stage biopharmaceutical company whose product
+    is an oral small-molecule drug pipeline (HST-1011, a CBL-B allosteric inhibitor),
+    not software — its "Smart Allostery" AI platform is an internal discovery engine
+    with no external interface, no api./docs./developer. host resolves in DNS, every
+    /.well-known/ path 404s, and its only public GitHub repo is a fork of the
+    third-party SETH bioinformatics tool.
+  evidence:
+  - url: https://www.hotspotthera.com/.well-known/api-catalog
+    status: 404
+  - url: https://www.hotspotthera.com/llms.txt
+    status: 404
+  - url: https://hotspotthera.com/.well-known/agent-card.json
+    status: 404
+  - url: https://api.github.com/orgs/HotSpot-Therapeutics/repos
+    status: 200
+  checked: '2026-08-22'

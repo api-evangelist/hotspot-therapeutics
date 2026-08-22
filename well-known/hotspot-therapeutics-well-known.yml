@@ -1,0 +1,48 @@
+generated: '2026-08-22'
+method: probed
+source: >-
+  Live unauthenticated GET of each /.well-known/ path on the company web host
+  (apex and www). Every path returned 404 from the WordPress origin, so NO
+  WellKnown or SecurityTxt pointer is emitted in apis.yml — this file records a
+  verified absence, not a served surface.
+note: >-
+  HotSpot Therapeutics runs a single marketing site (WordPress + Yoast, fronted by
+  Cloudflare). There is no API host: DNS lookups for api., docs., developer.,
+  developers., portal., app., data., platform., status. and trust.hotspotthera.com
+  all return NXDOMAIN. The /.well-known/ paths below answered with a clean 404 from
+  the origin — the Cloudflare managed challenge that returns 403 on ordinary HTML
+  page requests did not intercept them, so these statuses reflect the origin's real
+  answer.
+hosts:
+- host: hotspotthera.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: www.hotspotthera.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
