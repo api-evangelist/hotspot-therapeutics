@@ -11,6 +11,17 @@ description: 'HotSpot Therapeutics is a clinical-stage biopharmaceutical company
   dosing for cancer, alongside programs in autoimmune disease. HotSpot sells medicines
   and research collaborations, not software: it publishes no public developer program,
   API, SDK or machine-readable contract of any kind.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://avatars.githubusercontent.com/u/105356575?v=4
 url: https://raw.githubusercontent.com/api-evangelist/hotspot-therapeutics/refs/heads/main/apis.yml
 x-type: company
